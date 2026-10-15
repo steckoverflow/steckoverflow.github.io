@@ -115,6 +115,20 @@ skills:
         level: 58
         level_label: Intermediate
 
+# Compact status banner shown below the proficiency cards.
+current_status:
+  - label: Currently Learning
+    icon: fas fa-rocket
+    title: Kubernetes
+    detail: Building production-ready labs
+    # url: https://example.com/course
+
+  - label: Currently Reading
+    icon: fas fa-book-open
+    title: Designing Data-Intensive Applications
+    detail: Martin Kleppmann
+    # url: https://example.com/book
+
 content:
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)

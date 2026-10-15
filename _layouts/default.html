@@ -108,6 +108,25 @@
           </div>
         </div>
       {%- endif -%}
+
+      {%- if site.current_status -%}
+        <aside class="now-banner" aria-label="What I am currently learning and reading">
+          {%- for item in site.current_status -%}
+            <div class="now-item">
+              <span class="now-icon" aria-hidden="true"><i class="{{ item.icon }}"></i></span>
+              <div class="now-copy">
+                <span class="now-label">{{ item.label }}</span>
+                {%- if item.url -%}
+                  <a class="now-title" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+                {%- else -%}
+                  <span class="now-title">{{ item.title }}</span>
+                {%- endif -%}
+                {%- if item.detail -%}<span class="now-detail">{{ item.detail }}</span>{%- endif -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </aside>
+      {%- endif -%}
     </section>
 
     {%- for section in site.content -%}
