@@ -89,12 +89,12 @@
           <div class="skills-grid">
             {%- for category in site.skills -%}
               <section class="skill-category">
-                <h5>{{ category.title }}</h5>
+                <h5><i class="{{ category.icon }}" aria-hidden="true"></i>{{ category.title }}</h5>
                 <ul>
                   {%- for skill in category.items -%}
                     <li class="skill">
                       <div class="skill-label">
-                        <span>{{ skill.name }}</span>
+                        <span class="skill-name"><i class="{{ skill.icon }}" aria-hidden="true"></i>{{ skill.name }}</span>
                         <span>{{ skill.level_label }}</span>
                       </div>
                       <div class="skill-track" role="progressbar" aria-label="{{ skill.name }} proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ skill.level }}" aria-valuetext="{{ skill.level_label }}">
