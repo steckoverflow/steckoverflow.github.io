@@ -82,6 +82,32 @@
           {{ site.about_content | strip | markdownify }}
         </div>
       </div>
+
+      {%- if site.skills -%}
+        <div class="skills" aria-labelledby="skills-title">
+          <h4 class="skills-title" id="skills-title">{{ site.skills_title | default: "Technical proficiency" }}</h4>
+          <div class="skills-grid">
+            {%- for category in site.skills -%}
+              <section class="skill-category">
+                <h5>{{ category.title }}</h5>
+                <ul>
+                  {%- for skill in category.items -%}
+                    <li class="skill">
+                      <div class="skill-label">
+                        <span>{{ skill.name }}</span>
+                        <span>{{ skill.level_label }}</span>
+                      </div>
+                      <div class="skill-track" role="progressbar" aria-label="{{ skill.name }} proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ skill.level }}" aria-valuetext="{{ skill.level_label }}">
+                        <span class="skill-fill" style="width: {{ skill.level }}%"></span>
+                      </div>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </section>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
     </section>
 
     {%- for section in site.content -%}

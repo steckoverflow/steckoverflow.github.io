@@ -52,6 +52,54 @@ about_content: | # this will include new lines to allow paragraphs
 
   I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
 
+# Skills shown below the About Me section. Levels are percentages from 0 to 100.
+skills_title: Technical Proficiency
+skills:
+  - title: Programming Languages
+    items:
+      - name: Python
+        level: 88
+        level_label: Advanced
+      - name: PowerShell
+        level: 84
+        level_label: Advanced
+      - name: JavaScript
+        level: 72
+        level_label: Proficient
+
+  - title: Frameworks & Tools
+    items:
+      - name: React
+        level: 76
+        level_label: Proficient
+      - name: Node.js
+        level: 70
+        level_label: Proficient
+      - name: Git
+        level: 86
+        level_label: Advanced
+
+  - title: Platforms
+    items:
+      - name: AWS
+        level: 92
+        level_label: Expert
+      - name: Linux
+        level: 90
+        level_label: Expert
+      - name: Windows Server
+        level: 88
+        level_label: Advanced
+
+  - title: Languages
+    items:
+      - name: English
+        level: 100
+        level_label: Native
+      - name: Spanish
+        level: 58
+        level_label: Intermediate
+
 content:
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
