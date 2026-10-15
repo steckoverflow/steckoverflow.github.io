@@ -1,0 +1,362 @@
+// Mobile-first resume layout. Replaces Bootstrap 3 + modern-resume-theme.
+// Colors and fonts are themed in assets/main.scss.
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500,500italic,400italic,300italic,100italic,700italic);
+
+$tablet: 768px;
+$desktop: 992px;
+
+// Reset (the parts of Bootstrap the theme relied on)
+html {
+  box-sizing: border-box;
+  font-size: 10px; // 1rem = 10px, as with Bootstrap 3
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #333;
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+h1 { font-size: 3.2rem; font-weight: 500; margin-bottom: 0.1rem; }
+h2 { font-size: 1.8rem; font-weight: 300; }
+h3 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  border-bottom: dashed 2px #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+}
+h4 { font-size: 2.2rem; font-weight: 300; margin-bottom: 3px; }
+
+@media (min-width: $tablet) {
+  h1 { font-size: 4rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 3rem; }
+  h4 { font-size: 2.5rem; }
+}
+
+p, ul {
+  font-size: 1.6rem;
+  margin: 0 0 0.75rem;
+}
+
+a {
+  color: #477dca;
+  text-decoration: none;
+  transition: color 150ms ease;
+
+  &:hover, &:focus { text-decoration: underline; }
+}
+
+a i {
+  font-size: 1.6rem;
+}
+
+mark {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #fff;
+  background-color: #333;
+  border-radius: 3px;
+}
+
+// Page frame
+.container {
+  max-width: 1170px;
+  margin: 30px auto 0;
+  padding: 0 20px;
+}
+
+.header-container {
+  margin-top: 30px;
+}
+
+.footer-container {
+  margin-top: 100px;
+  margin-bottom: 30px;
+
+  p, a {
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+    color: inherit;
+  }
+}
+
+// Header: stacked on phones, two columns from tablet up
+.header-left {
+  margin-bottom: 20px;
+}
+
+.header-right {
+  p {
+    margin-bottom: 3px;
+  }
+
+  a {
+    color: inherit;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: $tablet) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .header-left {
+    margin: 30px 0 0;
+  }
+
+  .header-right {
+    text-align: right;
+  }
+}
+
+// Social icons: round buttons, 44px tap targets on phones
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+
+  a {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--panel);
+    text-decoration: none;
+    transition: color 0.3s;
+
+    // Filled circle that shrinks to a ring on hover
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      box-shadow: inset 0 0 0 35px var(--accent-strong);
+      transform: scale(0.9);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+
+    &:hover, &:focus {
+      color: var(--accent-strong);
+
+      &::before {
+        box-shadow: inset 0 0 0 2px var(--accent-strong);
+        transform: scale(1);
+      }
+    }
+  }
+
+  i {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .icons {
+    justify-content: flex-end;
+
+    a { width: 60px; height: 60px; }
+    i { font-size: 30px; }
+  }
+}
+
+// About
+.profile-img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 0 0 20px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 20px #636161;
+}
+
+@media (min-width: $tablet) {
+  .intro {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+// List items: details stacked over content on phones
+.list-container h3 {
+  margin-bottom: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+
+  .details {
+    margin-bottom: 1.5rem;
+
+    p {
+      margin-bottom: 3px;
+      font-size: 1.6rem;
+      font-weight: 300;
+
+      b { font-weight: 500; }
+    }
+
+    a {
+      color: inherit;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .link {
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      margin-bottom: 0.1rem;
+      font-weight: 500;
+    }
+  }
+
+  .content {
+    min-width: 0;
+  }
+}
+
+.additional-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+
+  i { font-size: 2rem; }
+}
+
+.border-weak {
+  padding-bottom: 8px;
+  border-bottom: dashed 1px #ccc;
+}
+
+p.quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  padding: 0.5rem 1.5rem;
+}
+
+@media (min-width: $tablet) {
+  .layout-left, .layout-right {
+    flex-direction: row;
+    gap: 30px;
+
+    .details {
+      flex: 0 0 calc(33.333% - 20px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .content { flex: 1; }
+  }
+
+  .layout-right {
+    flex-direction: row-reverse;
+  }
+
+  .layout-right .details,
+  .layout-top-right .details {
+    text-align: right;
+  }
+
+  .layout-top-middle .details {
+    text-align: center;
+  }
+
+  p.quote {
+    padding: 1rem 2.5rem;
+  }
+}
+
+@media (min-width: $desktop) {
+  .layout-left, .layout-right {
+    .details { flex-basis: calc(25% - 22.5px); }
+  }
+}
+
+// Print: header split, items full width, no icons or photo
+@media print {
+  body { font-size: 0.9rem; }
+
+  .container { margin-top: 20px; max-width: none; padding: 0; }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-left { margin: 0; }
+  .header-right { text-align: right; }
+
+  h3 { margin-bottom: 20px; }
+
+  .layout, .layout-right {
+    flex-direction: column;
+    break-inside: avoid;
+
+    .details { text-align: left; margin-bottom: 0; }
+    .details h4 { margin-bottom: 0.2rem; }
+  }
+
+  p.quote {
+    padding: 0 1rem;
+    margin-top: 1rem;
+  }
+
+  a[href]::after { content: none !important; }
+
+  .no-print, .no-print * { display: none !important; }
+}

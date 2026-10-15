@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.name }} | {{ site.title }}</title>
+  {%- seo title=false -%}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | default: '/assets/favicon.ico' | relative_url }}">
+</head>
+
+<body>
+  <header class="container header-container">
+    <div class="header-left">
+      <h1>{{ site.name | escape }}</h1>
+      <h2>{{ site.title | escape }}</h2>
+    </div>
+
+    <div class="header-right">
+      {%- comment -%} config key | profile URL prefix | icon | label {%- endcomment -%}
+      {%- capture socials -%}
+        dribbble_username|https://dribbble.com/|fab fa-dribbble-square|Dribbble
+        ;facebook_username|https://www.facebook.com/|fab fa-facebook|Facebook
+        ;flickr_username|https://www.flickr.com/photos/|fab fa-flickr|Flickr
+        ;github_username|https://github.com/|fab fa-github|Github
+        ;stackoverflow_username|https://stackoverflow.com/users/|fab fa-stack-overflow|Stackoverflow
+        ;instagram_username|https://www.instagram.com/|fab fa-instagram|Instagram
+        ;linkedin_username|https://www.linkedin.com/in/|fab fa-linkedin|Linkedin
+        ;xing_username|https://www.xing.com/profile/|fab fa-xing|Xing
+        ;pinterest_username|https://www.pinterest.com/|fab fa-pinterest|Pinterest
+        ;twitter_username|https://twitter.com/|fab fa-twitter|Twitter
+        ;youtube_username|https://www.youtube.com/|fab fa-youtube|Youtube
+        ;orcid_username|https://orcid.org/|fab fa-orcid|ORCiD
+        ;googlescholar_username|https://scholar.google.com/citations?user=|fab fa-google|Google scholar
+      {%- endcapture -%}
+
+      <ul class="icons no-print">
+        {%- assign social_rows = socials | split: ';' -%}
+        {%- for row in social_rows -%}
+          {%- assign social = row | strip | split: '|' -%}
+          {%- assign config_key = social[0] -%}
+          {%- assign username = site[config_key] -%}
+          {%- if username -%}
+            <li>
+              <a href="{{ social[1] }}{{ username | cgi_escape | escape }}" target="_blank" aria-label="{{ social[3] }} link">
+                <i class="{{ social[2] }}" title="{{ social[3] }} link"></i>
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+        {%- for link in site.additional_links -%}
+          <li>
+            {% include a.html href=link.url label=link.title %}
+              <i class="{{ link.icon }}" title="{{ link.title | escape }}"></i>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+
+      {%- if site.email -%}
+        <p>{{ site.email_title | default: "Email" }}: <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a></p>
+      {%- endif -%}
+      {%- if site.phone -%}
+        <p>{{ site.phone_title | default: "Phone" }}: {{ site.phone | escape }}</p>
+      {%- endif -%}
+      {%- if site.website -%}
+        <p>{{ site.website_title | default: "Web" }}: {% include a.html href=site.website %}{{ site.website | escape }}</a></p>
+      {%- endif -%}
+    </div>
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <section class="container intro-container">
+      <h3 id="{{ site.about_title | slugify | default: 'about-me' }}">{{ site.about_title | default: "About Me" }}</h3>
+      <div class="intro">
+        {%- if site.about_profile_image -%}
+          <span class="profile-img no-print" style="background-image: url({{ site.about_profile_image | relative_url }})"></span>
+        {%- endif -%}
+        <div class="intro-text">
+          {{ site.about_content | strip | markdownify }}
+        </div>
+      </div>
+    </section>
+
+    {%- for section in site.content -%}
+      <section class="container {{ section.layout }}-container">
+        <h3 id="{{ section.title | slugify }}">{{ section.title }}</h3>
+
+        {%- if section.layout == 'list' -%}
+          {%- for item in section.content -%}
+            <article class="layout layout-{{ item.layout | default: 'left' }} border-{{ item.border | default: 'no' }}">
+              <div class="details">
+                <h4 id="{{ item.title | slugify }}">{{ item.title }}</h4>
+                {%- if item.sub_title -%}<p><b>{{ item.sub_title }}</b></p>{%- endif -%}
+                {%- if item.caption -%}<p>{{ item.caption }}</p>{%- endif -%}
+
+                {%- if item.link -%}
+                  {% include a.html href=item.link class="link" %}{{ item.link_text | default: item.link }}</a>
+                {%- endif -%}
+
+                {%- if item.additional_links -%}
+                  <p class="no-print additional-links">
+                    {%- for link in item.additional_links -%}
+                      {% include a.html href=link.url label=link.title %}<i class="{{ link.icon }}" title="{{ link.title | escape }}"></i></a>
+                    {%- endfor -%}
+                  </p>
+                {%- endif -%}
+              </div>
+
+              <div class="content">
+                {%- if item.quote -%}<p class="quote">{{ item.quote }}</p>{%- endif -%}
+                {{ item.description | strip | markdownify }}
+              </div>
+            </article>
+          {%- endfor -%}
+        {%- else -%}
+          <div class="text">
+            {{ section.content | strip | markdownify }}
+          </div>
+        {%- endif -%}
+      </section>
+    {%- endfor -%}
+  </main>
+
+  <footer class="container footer-container">
+    <p>
+      {{ site.name | escape }} -
+      <a href="mailto:{{ site.email }}" target="_blank">{{ site.email | escape }}</a>
+      {%- if site.footer_show_references -%}
+        &nbsp;- {{ site.references_title | default: "References on request" }}
+      {%- endif -%}
+    </p>
+  </footer>
+</body>
+
+</html>

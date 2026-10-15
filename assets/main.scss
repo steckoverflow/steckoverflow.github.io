@@ -2,32 +2,34 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap');
 
-@import 'modern-resume-theme';
+@import 'resume';
 
-// pi.dev-inspired light palette
+// Warm cream + Catppuccin Latte peach palette
 :root {
-  --parchment: #dacbc2;
-  --panel: #f3f2f0;
-  --panel-soft: #f0f2f3;
-  --ink: #252f3d;
-  --copy: #384251;
-  --muted: #5c5752;
-  --line: #b3ada7;
-  --line-soft: #ddd6d0;
-  --accent: #4b607c;
-  --accent-hover: #2f3f57;
-  --rust: #b86b52;
+  --bg: #f6efe6;          // cream page
+  --panel: #fffaf3;       // light surface
+  --ink: #4c4f69;         // headings (Latte text)
+  --copy: #5c5f77;        // body text (Latte subtext1)
+  --muted: #63667c;       // captions, labels
+  --line: #dcc7b0;        // rules, borders
+  --line-soft: #ece0d2;   // weak separators
+  --accent: #fe640b;      // decoration only (Latte peach)
+  --accent-strong: #d9540a; // icon buttons
+  --link: #b84a0b;        // readable peach for text links
+  --link-hover: #c22f3e;  // deep Latte maroon
+  --mark-bg: #fde2cf;     // highlight pill
+  --mark-ink: #b4410a;
 
-  --font-serif: 'Spectral', Georgia, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'Fira Code', 'SFMono-Regular', Menlo, monospace;
 }
 
 body {
-  background-color: var(--parchment);
+  background-color: var(--bg);
   color: var(--copy);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-weight: 400;
 }
 
@@ -53,20 +55,21 @@ h4 {
 }
 
 a {
-  color: var(--accent);
+  color: var(--link);
 
   &:active,
   &:focus,
   &:hover {
-    color: var(--accent-hover);
+    color: var(--link-hover);
   }
 }
 
 mark {
-  background-color: var(--rust);
-  color: var(--panel);
+  background-color: var(--mark-bg);
+  color: var(--mark-ink);
   font-family: var(--font-mono);
-  border-radius: 0;
+  border-radius: 999px;
+  padding: 1px 8px;
 }
 
 // Section headings: mono label, left aligned, hairline rule
@@ -82,10 +85,10 @@ h3 {
   margin-bottom: 32px;
 }
 
-// Flat detail work: hairlines instead of shadows and dashes
+// Friendly detail work: round photo, soft borders
 .profile-img {
-  border-radius: 0;
-  border: solid 1px var(--line);
+  border-radius: 50%;
+  border: solid 3px var(--mark-bg);
   box-shadow: none;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -102,19 +105,21 @@ h3 {
 }
 
 p.quote {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   color: var(--muted);
   font-style: italic;
-  border-left: solid 2px var(--accent);
+  background-color: var(--panel);
+  border-left: solid 3px var(--accent);
+  border-radius: 0 8px 8px 0;
   text-align: left;
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .contact a {
   color: var(--muted);
 
   &:hover {
-    color: var(--accent);
+    color: var(--link);
   }
 }
 
