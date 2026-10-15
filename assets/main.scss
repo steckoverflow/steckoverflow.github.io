@@ -2,4 +2,137 @@
 # Front matter comment to ensure Jekyll properly reads file.
 ---
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
 @import 'modern-resume-theme';
+
+// pi.dev-inspired light palette
+:root {
+  --parchment: #dacbc2;
+  --panel: #f3f2f0;
+  --panel-soft: #f0f2f3;
+  --ink: #252f3d;
+  --copy: #384251;
+  --muted: #5c5752;
+  --line: #b3ada7;
+  --line-soft: #ddd6d0;
+  --accent: #4b607c;
+  --accent-hover: #2f3f57;
+  --rust: #b86b52;
+
+  --font-serif: 'Spectral', Georgia, serif;
+  --font-mono: 'Fira Code', 'SFMono-Regular', Menlo, monospace;
+}
+
+body {
+  background-color: var(--parchment);
+  color: var(--copy);
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-mono);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+a {
+  color: var(--accent);
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: var(--accent-hover);
+  }
+}
+
+mark {
+  background-color: var(--rust);
+  color: var(--panel);
+  font-family: var(--font-mono);
+  border-radius: 0;
+}
+
+// Section headings: mono label, left aligned, hairline rule
+h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  border-bottom: solid 1px var(--line);
+  padding-bottom: 12px;
+  margin-bottom: 32px;
+}
+
+// Flat detail work: hairlines instead of shadows and dashes
+.profile-img {
+  border-radius: 0;
+  border: solid 1px var(--line);
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.border-weak {
+  border-bottom: solid 1px var(--line-soft);
+}
+
+.layout .details p {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+p.quote {
+  font-family: var(--font-serif);
+  color: var(--muted);
+  font-style: italic;
+  border-left: solid 2px var(--accent);
+  text-align: left;
+  padding: 0.5rem 1.5rem;
+}
+
+.contact a {
+  color: var(--muted);
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.footer-container p,
+.footer-container a {
+  color: var(--muted);
+}
+
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+
+  mark {
+    background-color: transparent;
+    color: #000;
+    font-weight: 500;
+  }
+}
+
