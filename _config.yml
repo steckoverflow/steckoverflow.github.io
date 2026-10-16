@@ -6,7 +6,7 @@ favicon: images/favicon.ico
 version: 2
 
 name: Thomas Steck
-title: Senior Software Engineer | Computer Evangelist  
+title: Senior Software Engineer | Cloud, Data & AI Engineering
 email:  thomas.jp.steck@gmail.com 
 website: steckoverflow.github.io 
 
@@ -28,9 +28,9 @@ about_profile_image: images/profile.jpg
 about_content: | 
   Hi, my name's Thomas and I currently work as a senior software engineer at IKEA, although, I'd prefer to describe myself as somewhat of a <mark>computer generalist</mark>.
 
-  I have been making things with computers since an early age. Over the years I've worked in various industries and roles, including business intelligence, data warehousing, systems administration, cloud platforms and full-stack development. I'm not a lone wolf. I thrive in collaborative teams and love discussing problems, pair programming, staying curious, keeping an open mind and learning.
+  I have been making things with computers since an early age. Over the years I've worked in various industries and roles, including business intelligence, data warehousing, systems administration, cloud platforms and full-stack development. I thrive in collaborative teams and enjoy problem-solving, pair programming, and continuous learning.
 
-  I am a two times certified: <mark>Google Cloud Platform Developer</mark> and most skilled with <mark>Python</mark>.
+  I am <mark>Google Cloud Developer</mark> certified twice and am strongest in <mark>Python</mark>.
 
 # Skills shown below the About Me section. Levels are percentages from 0 to 100.
 skills_title: Technical Proficiency
@@ -131,11 +131,11 @@ current_status:
   - label: Currently Learning
     icon: fas fa-rocket
     title: Gleam 
-    detail: functional programming language
+    detail: functional programming
 
   - label: Last Read Book
     icon: fas fa-book-open
-    title: The Joy Of X A Guided Tour of Math, from One to Infinity
+    title: The Joy of X: A Guided Tour of Math, from One to Infinity
     detail: Steven Strogatz
     url: https://www.goodreads.com/book/show/13356649-the-joy-of-x
 
@@ -145,29 +145,29 @@ content:
     content:
       - layout: left
         title: IKEA IT AB
-        sub_title: Senior Software Engineer
+        sub_title: Senior Software Engineer — Data & Cloud Platforms
         caption: December 2021 - Present
         quote: >
           IKEA taught me that human success comes not from individual strengths but effective collaboration.
         description: | 
-            I joined IKEA as a systems engineer responsible for setting up and managing the brand-new <mark>Enterprise Metadata Catalog</mark>. During this period, IKEA was transitioning from on-premises infrastructure to a <mark>cloud-native</mark> operating model. I contributed to modernising engineering practices, including <mark>Infrastructure as Code</mark> and <mark>event-driven architecture</mark>.
-            I worked in a rapidly changing and uncertain environment, solving ambiguous technical and organisational problems while continuously learning new tools and technologies. This fast-changing environment continues today as the team explores and develops agentic AI solutions. I am currently integrating <mark>Atlan</mark> with <mark>Databricks</mark>.
+            I joined IKEA as a systems engineer responsible for setting up and managing the new <mark>Enterprise Metadata Catalogue</mark>. During this period, IKEA was transitioning from on-premises infrastructure to a <mark>cloud-native</mark> operating model. I contributed to modernising engineering practices, including <mark>Infrastructure as Code</mark> and <mark>event-driven architecture</mark>.
+            I worked in a rapidly changing and uncertain environment, solving ambiguous technical and organisational problems while continuously learning new tools and technologies. This fast-changing environment continues today as the team explores and develops agentic AI solutions. I am currently working on the integration of <mark>Atlan</mark> and <mark>Databricks</mark>.
 
             Key achievements
             - Mentored and tutored more than 150 junior engineers in test-driven development during a nine-week training programme called the 'Native Clouders Bootcamp'
-            - Certifying twice as a GCP Cloud Developer
+            - Earned two GCP Cloud Developer certifications
             - Participated in high-level vendor and contract negotiations
-            - Became a trusted and central contributor to the Data Catalog team
+            - Became a trusted and central contributor to the Data Catalogue team
 
       - layout: left
         title: Stretch 
         link: https://www.stretch.se/
-        sub_title: BI Consultant / Fullstack Developer / Cloud Engineer
+        sub_title: BI Consultant / Full-Stack Developer / Cloud Engineer
         caption: May 2017 - November 2021
         quote: >
           At Stretch I learned subject mastery requires an open mind and constant re-training. Enjoy the process and you'll enjoy the work.
         description: | 
-            During my time at Stretch, I worked as a consultant in business intelligence, analytics, and data warehousing within the energy and nuclear industries. I also developed applications using Vue and C#, and built data pipelines for customers across multiple industries.
+            During my time at Stretch, I worked as a consultant in business intelligence, analytics, and data warehousing within the energy and nuclear industries. I also developed full-stack applications using Vue and C#, and built data pipelines for customers across multiple industries.
 
       - layout: left
         title: Hypergene
@@ -177,7 +177,7 @@ content:
         quote: >
           Hypergene showed me that executives can be humble. The company welcomed me at the beginning of my career and helped shape who I am today.
         description: | 
-            Hypergene was an incredibly fast-growing company full of senior talent. I was the first person they hired directly from university and learned a lot from being mentored.
+            Hypergene was an incredibly fast-growing company full of senior talent. I was Hypergene’s first hire directly from university and developed quickly through mentorship from senior colleagues.
             As a consultant at Hypergene, I installed, adapted, and developed their highly innovative analytics software. I met people across many industries in both the private and public sectors.
 
             Key achievements
@@ -190,13 +190,13 @@ content:
         caption: 2013 - 2014
         sub_title: MSc Information Systems
         description: | 
-          Fast-paced master's programme in Computer Science. Taught entirely in English, with the vast majority of students from international backgrounds.
+          Fast-paced master’s programme in Information Systems, taught entirely in English, with the vast majority of students from international backgrounds.
       - layout: left
         title: Maastricht University
         caption: 2013 
-        sub_title: MSc Computer Science
+        sub_title: Exchange Semester — Computer Science, Business Management & Process Management
         quote: >
-          Exchange semester at a prestigious business university.
+          Exchange semester at Maastricht University, combining computer science, business management, and process management.
         description: | 
           Studied computer science, business management, and process management.
       - layout: left
