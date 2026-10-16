@@ -203,9 +203,9 @@ content:
       - layout: left
         title: Lund University
         caption: 2010 - 2013
-        sub_title: BSc Computer Science
+        sub_title: BSc Information Systems (Systemvetenskap)
         description: | 
-          Bachelor's degree in Computer Science.
+          Bachelor's degree in Information Systems
 
   - title: Outside the Office
     layout: text
