@@ -206,14 +206,15 @@ content:
         description: | 
           Bachelor's degree in Computer Science.
 
-  - title: Sidenotes about me
+  - title: Outside the Office
     layout: text
-    content: | 
-      I've always been active when I'm not in front of a computer enjoying a multitude of activities. 
-      I own a dog 🐶 
-      I drive a motorcycle 🏍️
-      I like skiing 🎿 
-      Father of two 👼
+    content: |
+      Outside of work, I enjoy an active life with my family and a variety of interests:
+
+      - Dog owner 🐶
+      - Motorcycle rider 🏍️
+      - Skiing enthusiast 🎿
+      - Father of two 👨‍👧‍👦
 
 footer_show_references: true
 
