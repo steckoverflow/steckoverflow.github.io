@@ -135,7 +135,7 @@ current_status:
 
   - label: Last Read Book
     icon: fas fa-book-open
-    title: The Joy of X: A Guided Tour of Math, from One to Infinity
+    title: "The Joy of X: A Guided Tour of Math, from One to Infinity"
     detail: Steven Strogatz
     url: https://www.goodreads.com/book/show/13356649-the-joy-of-x
 
