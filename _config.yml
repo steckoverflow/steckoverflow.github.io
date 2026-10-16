@@ -150,13 +150,14 @@ content:
         quote: >
           IKEA taught me that human success comes not from individual strengths but effective collaboration.
         description: | 
-            I joined IKEA as a systems engineer responsible for setting up and managing the new <mark>Enterprise Metadata Catalogue</mark>. During this period, IKEA was transitioning from on-premises infrastructure to a <mark>cloud-native</mark> operating model. I contributed to modernising engineering practices, including <mark>Infrastructure as Code</mark> and <mark>event-driven architecture</mark>.
+            I joined IKEA as a systems engineer responsible for setting up and managing the new <mark>Enterprise Metadata Catalogue</mark>. Later as my work changed my job title became software engineer. During this period, IKEA was transitioning from on-premises infrastructure to a <mark>cloud-native</mark> operating model. I contributed to modernising engineering practices, including <mark>Infrastructure as Code</mark> and <mark>event-driven architecture</mark>.
             I worked in a rapidly changing and uncertain environment, solving ambiguous technical and organisational problems while continuously learning new tools and technologies. This fast-changing environment continues today as the team explores and develops agentic AI solutions. I am currently working on the integration of <mark>Atlan</mark> and <mark>Databricks</mark>.
 
             Key achievements
             - Mentored and tutored more than 150 junior engineers in test-driven development during a nine-week training programme called the 'Native Clouders Bootcamp'
             - Earned two GCP Cloud Developer certifications
             - Participated in high-level vendor and contract negotiations
+            - Contributed to the design, development, and operation of an application that reliably served thousands of users over several years
             - Became a trusted and central contributor to the Data Catalogue team
 
       - layout: left
