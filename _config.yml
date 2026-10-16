@@ -14,28 +14,23 @@ website: steckoverflow.github.io
 github_username:  steckoverflow
 linkedin_username: thomas-steck-35730861
 
-# Additional icon links
 additional_links:
-- title: itsgoingto.be
-  icon: fas fa-globe
-  url: https://www.itsgoingto.be
+- title: Exercism
+  icon: fas fa-code
+  url: https://exercism.org/profiles/steckoverflow
 # - title: another link
 #   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
 #   url: Link url (eg. https://google.com)
 
-# Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
-# gtm: "GTM-0000000"
-# gtag: "UA-00000000-0"
-# google_analytics: "UA-00000000-0"
-
 # About Section
 # about_title: About Me
 about_profile_image: images/profile.jpg
-about_content: | # this will include new lines to allow paragraphs
-  Hi, my name's Brett and I'm a senior network system administrator. As well as administrating systems I also have experience making software and web apps. I have worked at a number of companies gaining teamwork and leadership skills.
+about_content: | 
+  Hi, my name's Thomas and I currently work as a senior software engineer at IKEA, although, I'd prefer to describe myself as somewhat of a <mark>computer generalist</mark>.
 
-  I am most skilled in: <mark>AWS</mark> and <mark>Eating Pizza</mark>
+  I have been making things with computers since an early age. Over the years I've worked in various industries and roles, including business intelligence, data warehousing, systems administration, cloud platforms and full-stack development. I'm not a lone wolf. I thrive in collaborative teams and love discussing problems, pair programming, staying curious, keeping an open mind and learning.
+
+  I am a two times certified: <mark>Google Cloud Platform Developer</mark> and most skilled with <mark>Python</mark>.
 
 # Skills shown below the About Me section. Levels are percentages from 0 to 100.
 skills_title: Technical Proficiency
@@ -45,138 +40,182 @@ skills:
     items:
       - name: Python
         icon: fab fa-python
-        level: 88
-        level_label: Advanced
-      - name: PowerShell
+        level: 95
+        level_label: Expert
+      - name: Shell
         icon: fas fa-terminal
-        level: 84
+        level: 90
+        level_label: Expert
+      - name: SQL
+        icon: fas fa-database
+        level: 90
+        level_label: Expert
+      - name: TypeScript
+        icon: fas fa-code
+        level: 86
         level_label: Advanced
-      - name: JavaScript
-        icon: fab fa-js
-        level: 72
+      - name: Golang
+        icon: fas fa-code
+        level: 80
+        level_label: Advanced
+      - name: Lua
+        icon: fas fa-code
+        level: 70
         level_label: Proficient
-
+     
   - title: Frameworks & Tools
     icon: fas fa-toolbox
     items:
-      - name: React
-        icon: fab fa-react
-        level: 76
-        level_label: Proficient
-      - name: Node.js
-        icon: fab fa-node-js
-        level: 70
-        level_label: Proficient
+      - name: Terraform
+        icon: fas fa-cubes
+        level: 95
+        level_label: Expert
+      - name: Docker
+        icon: fab fa-docker
+        level: 90
+        level_label: Expert
+      - name: Web
+        icon: fas fa-globe
+        level: 90
+        level_label: Expert
       - name: Git
         icon: fab fa-git-alt
         level: 86
         level_label: Advanced
+      - name: Node.js
+        icon: fab fa-node-js
+        level: 80
+        level_label: Advanced
 
-  - title: Platforms
+  - title: Misc
     icon: fas fa-server
     items:
-      - name: AWS
-        icon: fab fa-aws
-        level: 92
+      - name: GCP
+        icon: fas fa-cloud
+        level: 100
         level_label: Expert
       - name: Linux
         icon: fab fa-linux
         level: 90
         level_label: Expert
-      - name: Windows Server
-        icon: fab fa-windows
-        level: 88
+      - name: CI/CD
+        icon: fas fa-sync-alt
+        level: 90
+        level_label: Expert
+      - name: Security
+        icon: fas fa-shield-alt
+        level: 90
+        level_label: Expert
+      - name: Agentic AI
+        icon: fas fa-robot
+        level: 80
         level_label: Advanced
 
   - title: Languages
     icon: fas fa-language
     items:
-      - name: English
+      - name: Swedish
         icon: fas fa-comment
         level: 100
         level_label: Native
-      - name: Spanish
+      - name: Swiss German
         icon: fas fa-comment
-        level: 58
-        level_label: Intermediate
+        level: 95
+        level_label: Native
+      - name: English
+        icon: fas fa-comment
+        level: 95
+        level_label: Near-native
 
-# Compact status banner shown below the proficiency cards.
 current_status:
   - label: Currently Learning
     icon: fas fa-rocket
-    title: Kubernetes
-    detail: Building production-ready labs
-    # url: https://example.com/course
+    title: Gleam 
+    detail: functional programming language
 
-  - label: Currently Reading
+  - label: Last Read Book
     icon: fas fa-book-open
-    title: Designing Data-Intensive Applications
-    detail: Martin Kleppmann
-    # url: https://example.com/book
+    title: The Joy Of X A Guided Tour of Math, from One to Infinity
+    detail: Steven Strogatz
+    url: https://www.goodreads.com/book/show/13356649-the-joy-of-x
 
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: top-middle
-        title: Super awesome project
-        link: github.com/sproogen
-        # link_text: Project Website
-        additional_links:
-          - title:  sproogen/modern-resume-theme
-            icon: fab fa-github
-            url: github.com/sproogen/modern-resume-theme
-          # - title:  Github page for project (eg. sproogen/modern-resume-theme)
-          #   icon: fab fa-github
-          #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
-        quote: >
-          This is probably one of the greatest apps ever created, if you don't agree you're probably wrong.
-        description: | # this will include new lines to allow paragraphs
-          I started this project as a way if learning <mark>React</mark> and it has since grown into a fully fledged app. I have learned many skills through this and been I'm very proud of having this in my portfolio. If you don't have a project as awesome as this I would advise you make one.
-
-  - title: Experience # Title for the section
-    layout: list # Type of content section (list/text)
+  - title: Experience 
+    layout: list 
     content:
       - layout: left
-        title: The Boring Company
-        link: boringcompany.com
-        # link_text: boringcompany.com
-        sub_title: Senior Network System Administrator
-        caption: November 2017 - Present
+        title: IKEA IT AB
+        sub_title: Senior Software Engineer
+        caption: December 2021 - Present
         quote: >
-          Solving 21st century problems by diging holes and making game changing products like the *not a flamethrower*
-        description: | # this will include new lines to allow paragraphs
-            Every company needs its networks properly administered and The Boring Compay is no exception. Digging holes is hard and I play my part making sure the whole company stays connected. I lead a team of 5 people and enjoy driving the company to try new technologies.
+          IKEA taught me that human success comes not from individual strengths but effective collaboration.
+        description: | 
+            I joined IKEA as a systems engineer responsible for setting up and managing the brand-new <mark>Enterprise Metadata Catalog</mark>. During this period, IKEA was transitioning from on-premises infrastructure to a <mark>cloud-native</mark> operating model. I contributed to modernising engineering practices, including <mark>Infrastructure as Code</mark> and <mark>event-driven architecture</mark>.
+            I worked in a rapidly changing and uncertain environment, solving ambiguous technical and organisational problems while continuously learning new tools and technologies. This fast-changing environment continues today as the team explores and develops agentic AI solutions. I am currently integrating <mark>Atlan</mark> with <mark>Databricks</mark>.
 
-  - title: Education # Title for the section
-    layout: list # Type of content section (list/text)
+            Key achievements
+            - Mentored and tutored more than 150 junior engineers in test-driven development during a nine-week training programme called the 'Native Clouders Bootcamp'
+            - Certifying twice as a GCP Cloud Developer
+            - Participated in high-level vendor and contract negotiations
+            - Became a trusted and central contributor to the Data Catalog team
+
+      - layout: left
+        title: Stretch 
+        link: https://www.stretch.se/
+        sub_title: BI Consultant / Fullstack Developer / Cloud Engineer
+        caption: May 2017 - November 2021
+        quote: >
+          At Stretch I learned subject mastery requires an open mind and constant re-training. Enjoy the process and you'll enjoy the work.
+        description: | 
+            During my time at Stretch, I worked as a consultant in business intelligence, analytics, and data warehousing within the energy and nuclear industries. I also developed applications using Vue and C#, and built data pipelines for customers across multiple industries.
+
+      - layout: left
+        title: Hypergene
+        link: https://www.hypergene.com/sv
+        sub_title: Business Intelligence Consultant 
+        caption: August 2014 - May 2017
+        quote: >
+          Hypergene showed me that executives can be humble. The company welcomed me at the beginning of my career and helped shape who I am today.
+        description: | 
+            Hypergene was an incredibly fast-growing company full of senior talent. I was the first person they hired directly from university and learned a lot from being mentored.
+            As a consultant at Hypergene, I installed, adapted, and developed their highly innovative analytics software. I met people across many industries in both the private and public sectors.
+
+            Key achievements
+            - Built a budgeting and forecasting tool for one of Sweden's largest real estate companies
+  - title: Education 
+    layout: list 
     content:
       - layout: left
-        title: Harvard University
+        title: Lund University
+        caption: 2013 - 2014
+        sub_title: MSc Information Systems
+        description: | 
+          Fast-paced master's programme in Computer Science. Taught entirely in English, with the vast majority of students from international backgrounds.
+      - layout: left
+        title: Maastricht University
+        caption: 2013 
+        sub_title: MSc Computer Science
+        quote: >
+          Exchange semester at a prestigious business university.
+        description: | 
+          Studied computer science, business management, and process management.
+      - layout: left
+        title: Lund University
         caption: 2010 - 2013
         sub_title: BSc Computer Science
-        quote: >
-          Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
-        description: | # this will include new lines to allow paragraphs
-          During my time at Harvard I learnt most of my key skills that have I have taken through my career such as teamwork and working to tight deadlines. I thouroughly enjoyed my time as university and learnt a lot about a healthy work life balance.
+        description: | 
+          Bachelor's degree in Computer Science.
 
-          I spent a lot of my free time as a committee member of the *Harvard Mountaineering Club* taking on roles such as *Trip Secretary* and *Vice-President*.
-
-  - title: A Little More About Me
+  - title: Sidenotes about me
     layout: text
-    content: | # this will include new lines to allow paragraphs
-      Alongside my interests in networks and software engineering some of my other interests and hobbies are:
-      - Rock climbing
-      - Gaming
-      - Knitting
-      - [Becoming a ninja](https://www.youtube.com/watch?v=vtg4o__aRMg)
+    content: | 
+      I've always been active when I'm not in front of a computer enjoying a multitude of activities. 
+      I own a dog 🐶 
+      I drive a motorcycle 🏍️
+      I like skiing 🎿 
+      Father of two 👼
 
-      Look at this cool image  
-      ![Trees](/modern-resume-theme/images/landscape-trees.jpg "Trees")
-
-# Footer
 footer_show_references: true
-# references_title: References on request (Override references text)
 
 # Build settings
 sass:
